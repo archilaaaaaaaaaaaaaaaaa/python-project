@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Niggers</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .nigger-card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">List of Niggers</h1>
+        <div class="text-right mb-3">
+            <button type="button" class="btn btn-primary mr-2" onclick="location.href='/add_nigger'">Sell Nigger</button>
+        </div>
+        <div class="nigger-card">
+            <div class="row">
+                {% for nigger in niggers %}
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img src=https://uploads.dailydot.com/2023/05/beetlejuice-just-hangng-around.jpg?q=65&auto=format&w=2270&ar=2:1&fit=crop class="card-img-top" alt="Nigger Image">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ nigger.name }}</h5>
+                            <p class="card-text">Price: {{ nigger.price }}</p>
+                            <p class="card-text">Owner: {{ nigger.owner }} </p>
+                        </div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#changeOwnerModal{{ nigger.id }}">Buy Nigger</button>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="changeOwnerModal{{ nigger.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Change Owner</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/buy_nigger/{{nigger.id}}" method="post">
+                                    <div class="form-group">
+                                        <label for="owner">New Owner Name:</label>
+                                        <input type="text" class="form-control" id="owner" name="owner" required>
+                                    </div>
+                                    <input type="hidden" name="nigger_id" value="{{ nigger.id }}">
+                                    <button type="submit" class="btn btn-primary">Buy Nigger</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!-- index1.html -->
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Bootstrap 5 Carousel Slider</title>
+{% endblock %}
+
+{% block content %}
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active c-item">
+                <img src="static/gogo_logo.jpg" class="d-block w-100 c-img" alt="Slide 1" height="600">
+                <div class="carousel-caption top-0 mt-4">
+                    <p class="mt-5 fs-3 text-uppercase"></p>
+                    <h1 class="display-3 fw-bolder text-capitalize">“In learning you will teach, and in teaching you will learn.”</h1>
+                    <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#service1">Learn more</button>
+                </div>
+            </div>
+            <div class="carousel-item c-item">
+                <img src="static/image1_0.jpg" class="d-block w-100 c-img" alt="Slide 2" height="600" width="500">
+                <div class="carousel-caption top-0 mt-4">
+                    <p class="text-uppercase fs-3 mt-5"></p>
+                    <p class="display-1 fw-bolder text-capitalize">
+                        for all students,
+                        for all classes,
+                        Real results</p>
+                    <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#service1">Learn more</button>
+                </div>
+            </div>
+            <div class="carousel-item c-item">
+                <img src="static/image2.jpg" class="d-block w-100 c-img" alt="Slide 3" height="600">
+                <div class="carousel-caption top-0 mt-4">
+                    <p class="text-uppercase fs-3 mt-5"></p>
+                    <p class="display-1 fw-bolder text-capitalize">Start learning Now</p>
+                    <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#service1">Learn more</button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+    <title>Shop</title>
+    <style>
+        
+        
+       
+        .courses{
+            display: flex;
+            width:100%;
+            margin:auto;
+        }
+        .course{
+            height:10vw;
+            border: 2px solid black;
+            border-radius: 1vw;
+            width:32%;
+            padding-top:1.5%;
+            text-align:center;
+            margin-left:1vw;
+        }
+        .course1{
+            margin-left:0.55vw;
+        }
+        button{
+            border:1px solid green;
+            border-radius: 5px;
+            background-color: transparent;
+            cursor: pointer;
+            transition: all 0.2s ease-out 0ms;
+        }
+        button:hover{
+            background-color: green;
+            color:white;
+        }
+      
+       
+    </style>
+
+
+
+
+
+
+
+
+<h1></h1>
+
+
+
+
+
+
+<h1></h1>
+
+
+
+    <main>
+        <h1 style="font-family:Arial, Helvetica, sans-serif;" class="text-center">official Skillspot courses</h1>
+
+        <div class="courses">
+            <div class="course1 course">
+                <h2>Beginner Course</h2>
+                <p>Learning only Basis of Programming, Starting with Python, then HTML and CSS. Will learn, only Basics</p>
+                <button>19.99$/month</button>
+            </div>
+            <div class="course2 course">
+                <h2>Advanced Course</h2>
+                <p>Learning easiest programming Languages fully</p>
+                <button>49.99$/month</button>
+            </div>
+            <div class="course3 course">
+                <h2>Master Course</h2>
+                <button>99.99$/month</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+{% endblock %}
